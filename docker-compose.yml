@@ -1,0 +1,20 @@
+version: '3.0'
+services:
+
+  mysql:
+    container_name: telephone-billing-mysql
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "telephone-billing-dev"
+      MYSQL_ROOT_PASSWORD: "123456789"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./docker/mysql/init-database-test.sql:/docker-entrypoint-initdb.d/init-database-test.sql
+
+volumes:
+  mysql:
+    driver: local
+
