@@ -1,4 +1,4 @@
-package com.example.telephone_billing;
+package com.example.telephonebilling;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
