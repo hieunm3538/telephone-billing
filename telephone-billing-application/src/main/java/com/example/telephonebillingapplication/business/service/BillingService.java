@@ -1,13 +1,13 @@
-package com.example.telephonebilling.business.service;
+package com.example.telephonebillingapplication.business.service;
 
-import com.example.telephonebilling.business.IBillingService;
-import com.example.telephonebilling.dto.request.CallRecordRequest;
-import com.example.telephonebilling.dto.response.BillingResponse;
-import com.example.telephonebilling.dto.response.CallRecordResponse;
-import com.example.telephonebilling.model.Billing;
-import com.example.telephonebilling.model.User;
-import com.example.telephonebilling.repository.BillingRepository;
-import com.example.telephonebilling.repository.UserRepository;
+import com.example.telephonebillingapplication.business.IBillingService;
+import com.example.telephonebillingapplication.dto.request.CallRecordRequest;
+import com.example.telephonebillingapplication.dto.response.BillingResponse;
+import com.example.telephonebillingapplication.dto.response.CallRecordResponse;
+import com.example.telephonebillingapplication.model.Billing;
+import com.example.telephonebillingapplication.model.User;
+import com.example.telephonebillingapplication.repository.BillingRepository;
+import com.example.telephonebillingapplication.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
@@ -27,9 +27,10 @@ public class BillingService implements IBillingService {
         if (ObjectUtils.isEmpty(user)) {
             user = new User();
             user.setUsername(username);
+            userRepository.save(user);
 
             Billing billing = new Billing();
-            billing.setUserId(userRepository.saveAndFlush(user).getId());
+            billing.setUserId(userRepository.findByUsername(username).getId());
             billing.setCallCount(1L);
             billing.setBlockCount(Math.floorDiv(request.getDuration(), 30000) + 1);
             billingRepository.save(billing);

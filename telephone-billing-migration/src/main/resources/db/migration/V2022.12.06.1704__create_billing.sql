@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS `billing`;
 CREATE TABLE `billing`
 (
-    `id` int NOT NULL,
+    `id` int NOT NULL AUTO_INCREMENT,
     `user_id` int NOT NULL,
     `call_count` int NOT NULL,
     `block_count` int NOT NULL,

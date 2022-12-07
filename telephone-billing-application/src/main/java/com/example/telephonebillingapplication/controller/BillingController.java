@@ -1,9 +1,9 @@
-package com.example.telephonebilling.controller;
+package com.example.telephonebillingapplication.controller;
 
-import com.example.telephonebilling.business.IBillingService;
-import com.example.telephonebilling.dto.request.CallRecordRequest;
-import com.example.telephonebilling.dto.response.BillingResponse;
-import com.example.telephonebilling.dto.response.CallRecordResponse;
+import com.example.telephonebillingapplication.business.IBillingService;
+import com.example.telephonebillingapplication.dto.request.CallRecordRequest;
+import com.example.telephonebillingapplication.dto.response.BillingResponse;
+import com.example.telephonebillingapplication.dto.response.CallRecordResponse;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

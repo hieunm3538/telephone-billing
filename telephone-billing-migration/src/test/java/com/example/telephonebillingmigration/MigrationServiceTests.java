@@ -1,10 +1,10 @@
-package com.example.telephonebillingapplication;
+package com.example.telephonebillingmigration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TelephoneBillingApplicationTests {
+class MigrationServiceTests {
 
     @Test
     void contextLoads() {

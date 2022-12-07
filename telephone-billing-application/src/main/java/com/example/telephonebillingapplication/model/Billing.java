@@ -1,4 +1,4 @@
-package com.example.telephonebilling.model;
+package com.example.telephonebillingapplication.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.Data;
 @Table(name = "billing")
 public class Billing {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "user_id")

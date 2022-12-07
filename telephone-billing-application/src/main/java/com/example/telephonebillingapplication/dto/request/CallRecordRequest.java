@@ -1,4 +1,4 @@
-package com.example.telephonebilling.dto.request;
+package com.example.telephonebillingapplication.dto.request;
 
 import lombok.Data;
 

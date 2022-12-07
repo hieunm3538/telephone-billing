@@ -1,6 +1,6 @@
-package com.example.telephonebilling.repository;
+package com.example.telephonebillingapplication.repository;
 
-import com.example.telephonebilling.model.User;
+import com.example.telephonebillingapplication.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
