@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+  <changeSet author="hieu.nguyen20" id="init_database">
+    <sqlFile dbms="mysql"
+             path="classpath:/db/migration/V2022.12.06.1703__init.sql"
+             relativeToChangelogFile="false"/>
+  </changeSet>
+
+  <changeSet author="hieu.nguyen20" id="2_create_billing_tables">
+    <sqlFile dbms="mysql"
+      path="classpath:/db/migration/V2022.12.06.1704__create_billing.sql"
+      relativeToChangelogFile="false"/>
+  </changeSet>
+</databaseChangeLog>
